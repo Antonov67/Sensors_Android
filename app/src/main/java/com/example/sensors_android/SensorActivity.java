@@ -63,8 +63,12 @@ public class SensorActivity extends AppCompatActivity {
            public void onSensorChanged(SensorEvent sensorEvent) {
                list.clear();
                float[] nums = sensorEvent.values; // получаем данные от датчика в виде массива float[]
-               String[] a=Arrays.toString(nums).split("[\\[\\]]")[1].split(", "); // преобразуем массив чисел в массив строк
-               list.addAll(Arrays.asList(a)); // создаем список для адаптера из массива
+               //заполним список из массива в цикле поэлементно
+               for (int i=0; i<nums.length;i++){
+                    list.add(String.valueOf(nums[i]));
+               }
+               // String[] a=Arrays.toString(nums).split("[\\[\\]]")[1].split(", "); // преобразуем массив чисел в массив строк
+               // list.addAll(Arrays.asList(a)); // создаем список для адаптера из массива
                adapter.notifyDataSetChanged(); // обновляем адаптер, а значит и список
            }
 

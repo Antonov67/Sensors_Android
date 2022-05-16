@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sensors_Android</string>
+    <string name="countResource">\"Общее количество сенсоров \"</string>
 </resources>

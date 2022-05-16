@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //отобразим количество датчиков на экране
-        countSensors.setText("Общее количество сенсоров " + deviceSensors.size());
+        countSensors.setText(getString(R.string.countResource) + deviceSensors.size());
 
        //создадим новый адаптер для listView
        // третий параметр - это запрос к базе данных на получение списка сенсоров
